@@ -17,9 +17,15 @@
                     <x-tag>{{ $job->category }}</x-tag>
                 </div>
             </div>
-            <p class="text-sm text-slate-500">
+            <p class="mb-4 text-sm text-slate-500">
                 {!! nl2br(e($job->description)) !!}
             </p>
+            <div>
+                <a href="{{route('jobs.show', $job)}}"
+                   class="rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-slate-100">
+                    View
+                </a>
+            </div>
         </x-card>
     @endforeach
 </x-layout>
