@@ -21,10 +21,9 @@
                 {!! nl2br(e($job->description)) !!}
             </p>
             <div>
-                <a href="{{route('jobs.show', $job)}}"
-                   class="rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-slate-100">
+                <x-link-button :href="route('jobs.show', $job)">
                     View
-                </a>
+                </x-link-button>
             </div>
         </x-card>
     @endforeach
